@@ -10,9 +10,9 @@ var fs = require('fs');
 });
 */
 
-fs.readdir('./folder', 'utf-8', function(err, files) {
+fs.readdir('./assets', 'utf-8', function(err, files) {
 	if (err) throw err; // jeśli pojawi się błąd, wyrzuć wyjątek
-    console.log('Katalog folder zawiera:');
+    console.log('Katalog /assets zawiera:');
     console.log(files);
 	fs.writeFile('./lista_plikow.txt', files , function(err) {
     	if (err) throw err; 
